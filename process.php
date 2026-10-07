@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username   = "root";     // MySQL Username
-$password   = "";         // MySQL Password
+$password   = "panhayko1610";         // MySQL Password
 $dbname     = "tech_company";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO contacts (name, email, phone) VALUES ('$user_name', '$user_email', '$user_phone')";
 
     if ($conn->query($sql) === TRUE) {
-        header("Location: submit.html");
+        header("Location: contact.html");
         exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
